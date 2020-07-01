@@ -11,11 +11,12 @@ Besides that the Python code is ported, it also contains the following changes:
 
 The goal of this project is to provide a proof of concept for:
 
-* a port of Play1's `play` CLI tool to Python 3
-* a more modern way to install the `play` CLI tool
-* a way to not have loads of vendor code (JARs, JS files, etc) in the source tree
-* using Gradle (over Ivy) to manage dependencies where possible
-* using Gradle (over Ant) as a generic build tool
+* a port of Play1's `play` CLI tool to Python 3 **[seems to work]**
+* a more modern way to install the `play` CLI tool **[not yet started, looking into `pip`]**
+* a way to not have loads of vendor code (JARs, JS files, etc) in the source tree **[seems to work]**
+* using Gradle (over Ivy) to manage dependencies where possible **[seems to work]**
+* using Gradle (over Ant) as a generic build tool **[not yet started]**
+* using Gradle to apply patches (if this is even possible) **[not yet started]**
 
 
 ## Installing
