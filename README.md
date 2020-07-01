@@ -1,6 +1,6 @@
 # play1-cli
 
-This is a port of the [Play1](https://github.com/playframework/play1) CLI tool to Python 3.
+This is a **work in progress** and **proof of concept** port of the [Play1](https://github.com/playframework/play1) CLI tool to Python 3.
 
 Besides that the Python code is ported, it also contains the following changes:
 
