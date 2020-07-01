@@ -1,0 +1,117 @@
+apply plugin: 'base'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    toFrameworkLib
+    toFirephoque
+}
+
+dependencies {
+    // the @jar suffix to exclude transitive deps
+    // still missing: c3p0-oracle-thin-extras-0.9.5.jar, commons-collections-3.2.2.jar, ehcache-core-2.6.11.jar, hibernate.Patched, jj-*, mail-1.4.7.jar
+    toFrameworkLib('antlr:antlr:2.7.7@jar')
+    toFrameworkLib('com.mchange:c3p0:0.9.5.2@jar')
+    toFrameworkLib('com.zaxxer:HikariCP:3.2.0@jar')
+    toFrameworkLib('org.ow2.asm:asm:7.0@jar')
+    toFrameworkLib('org.ow2.asm:asm-commons:7.0@jar')
+    toFrameworkLib('org.ow2.asm:asm-util:7.0@jar')
+    toFrameworkLib('org.ow2.asm:asm-tree:7.0@jar')
+    toFrameworkLib('org.ow2.asm:asm-analysis:7.0@jar')
+    toFrameworkLib('cglib:cglib:3.2.7@jar')
+    toFrameworkLib('com.google.code.gson:gson:2.8.5@jar')
+    toFrameworkLib('com.jamonapi:jamon:2.81@jar')
+    toFrameworkLib('com.ning:async-http-client:1.9.40@jar')
+    toFrameworkLib('commons-beanutils:commons-beanutils:1.9.2@jar')
+    toFrameworkLib('commons-codec:commons-codec:1.10@jar')
+    toFrameworkLib('org.apache.commons:commons-email:1.5@jar')
+    toFrameworkLib('commons-fileupload:commons-fileupload:1.3.2@jar')
+    toFrameworkLib('commons-io:commons-io:2.5@jar')
+    toFrameworkLib('com.google.code.maven-play-plugin.org.apache.commons:commons-javaflow:1590792@jar')
+    toFrameworkLib('commons-lang:commons-lang:2.6@jar')
+    toFrameworkLib('commons-logging:commons-logging:1.2@jar')
+    toFrameworkLib('dom4j:dom4j:1.6.1@jar')
+    toFrameworkLib('com.h2database:h2:1.4.196@jar')
+    toFrameworkLib('javax.activation:activation:1.1.1@jar')
+    toFrameworkLib('com.sun.mail:javax.mail:1.6.2@jar')
+    toFrameworkLib('javax.inject:javax.inject:1@jar')  // 1.0')
+    toFrameworkLib('javax.validation:validation-api:1.1.0.Final@jar')
+    toFrameworkLib('jaxen:jaxen:1.1.6@jar')
+    toFrameworkLib('joda-time:joda-time:2.10@jar')
+    toFrameworkLib('org.hamcrest:hamcrest-all:1.3@jar')
+    toFrameworkLib('junit:junit:4.12@jar')
+    toFrameworkLib('net.sourceforge.jregex:jregex:1.2_01@jar')
+    toFrameworkLib('log4j:log4j:1.2.17@jar')
+    toFrameworkLib('net.sf.ehcache:ehcache:2.10.6@jar')
+    toFrameworkLib('net.sf.ezmorph:ezmorph:1.0.6@jar')
+    toFrameworkLib('net.sf.jsr107cache:jsr107cache:1.1@jar')
+    toFrameworkLib('net.sf.oval:oval:1.86@jar')
+    toFrameworkLib('mysql:mysql-connector-java:8.0.17@jar')
+    toFrameworkLib('oauth.signpost:signpost-core:1.2.1.2@jar')
+    toFrameworkLib('org.apache.geronimo.specs:geronimo-servlet_2.5_spec:1.2@jar')
+    toFrameworkLib('org.apache.ivy:ivy:2.4.0@jar')
+    toFrameworkLib('org.bouncycastle:bcprov-jdk15on:1.61@jar')
+    toFrameworkLib('org.bouncycastle:bcpkix-jdk15on:1.61@jar')
+    toFrameworkLib('org.codehaus.groovy:groovy:2.5.3@jar')
+    toFrameworkLib('org.codehaus.groovy:groovy-xml:2.5.3@jar')
+    toFrameworkLib('org.eclipse.jdt:org.eclipse.jdt.core:3.16.0@jar')
+    toFrameworkLib('org.hibernate:hibernate-core:5.4.1.Final@jar')  // .patched@jar')
+    toFrameworkLib('net.bytebuddy:byte-buddy:1.9.5@jar')
+    toFrameworkLib('javax.persistence:javax.persistence-api:2.2@jar')
+    toFrameworkLib('org.hibernate.common:hibernate-commons-annotations:5.0.1.Final@jar')
+    toFrameworkLib('org.hibernate:hibernate-validator:5.4.1.Final@jar')
+    toFrameworkLib('org.jboss.logging:jboss-logging:3.3.0.Final:@jar')
+    toFrameworkLib('org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.0.1.Final@jar')
+    toFrameworkLib('javax.persistence:javax.persistence-api:2.2:@jar')
+    toFrameworkLib('javax.xml.bind:jaxb-api:2.3.1@jar')
+    toFrameworkLib('org.glassfish.jaxb:jaxb-runtime:2.3.1@jar')
+    toFrameworkLib('com.fasterxml:classmate:1.3.4@jar')
+    toFrameworkLib('org.hibernate:hibernate-c3p0:5.4.1.Final@jar')
+    toFrameworkLib('org.hibernate:hibernate-ehcache:5.4.1.Final@jar')
+    toFrameworkLib('com.mchange:mchange-commons-java:0.2.12@jar')
+    toFrameworkLib('org.javassist:javassist:3.24.0-GA@jar')
+    toFrameworkLib('io.netty:netty:3.10.6.Final@jar')
+    toFrameworkLib('org.postgresql:postgresql:42.2.4@jar')
+    toFrameworkLib('org.slf4j:slf4j-api:1.7.22@jar')
+    toFrameworkLib('org.slf4j:slf4j-log4j12:1.7.22@jar')
+    toFrameworkLib('org.yaml:snakeyaml:1.17@jar')
+    toFrameworkLib('net.spy:spymemcached:2.12.1@jar')
+    toFrameworkLib('com.thoughtworks.xstream:xstream:1.4.9@jar')
+    toFrameworkLib('xmlpull:xmlpull:1.1.3.4d_b4_min@jar')
+
+    toFirephoque('commons-codec:commons-codec:1.10@jar')
+    toFirephoque('commons-collections:commons-collections:3.2.1@jar')
+    toFirephoque('commons-io:commons-io:2.5@jar')
+    toFirephoque('org.apache.commons:commons-lang3:3.4@jar')
+    toFirephoque('commons-logging:commons-logging:1.2@jar')
+    toFirephoque('net.sourceforge.cssparser:cssparser:0.9.20@jar')
+    toFirephoque('net.sourceforge.htmlunit:htmlunit:2.23@jar')
+    toFirephoque('net.sourceforge.htmlunit:htmlunit-core-js:2.23@jar')
+    toFirephoque('org.apache.httpcomponents:httpclient:4.5.2@jar')
+    toFirephoque('org.apache.httpcomponents:httpcore:4.4.4@jar')
+    toFirephoque('org.apache.httpcomponents:httpmime:4.5.2@jar')
+    toFirephoque('org.eclipse.jetty:jetty-http:9.2.17.v20160517@jar')
+    toFirephoque('org.eclipse.jetty:jetty-io:9.2.18.v20160721@jar')
+    toFirephoque('org.eclipse.jetty:jetty-util:9.2.18.v20160721@jar')
+    toFirephoque('net.sourceforge.htmlunit:neko-htmlunit:2.23@jar')
+    toFirephoque('org.w3c.css:sac:1.3@jar')
+    toFirephoque('xalan:serializer:2.7.2@jar')
+    toFirephoque('org.eclipse.jetty.websocket:websocket-api:9.2.18.v20160721@jar')
+    toFirephoque('org.eclipse.jetty.websocket:websocket-client:9.2.18.v20160721@jar')
+    toFirephoque('org.eclipse.jetty.websocket:websocket-common:9.2.18.v20160721@jar')
+    toFirephoque('xalan:xalan:2.7.2@jar')
+    toFirephoque('xerces:xercesImpl:2.11.0@jar')
+    toFirephoque('xml-apis:xml-apis:1.4.01@jar')
+}
+
+task getFrameworkDeps(type: Copy) {
+    from configurations.toFrameworkLib
+    into 'framework/lib'
+}
+
+task getFirephoqueDeps(type: Copy) {
+    from configurations.toFirephoque
+    into 'modules/testrunner/firephoque'
+}

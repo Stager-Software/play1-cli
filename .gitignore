@@ -49,6 +49,16 @@ ENV/
 env.bak/
 venv.bak/
 
+#### Java ignores
+
+# Common
+.idea
+*.iml
+build
+tmp
+out
+.gradle
+
 # Gradle managed dependencies
 framework/lib
 modules/testrunner/firephoque
